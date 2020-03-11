@@ -1,14 +1,16 @@
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import { hot } from 'react-hot-loader';
 
 import './App.scss';
 
 const App = () => {
     return (
         <div>
-            <p>Hello world</p>
+            <p>Hello world from Elie</p>
         </div>
     )
 }
 
-ReactDom.render(<App />, document.getElementById('app'));
+declare const module:any;
+
+export default hot(module)(App);
