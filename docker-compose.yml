@@ -1,0 +1,17 @@
+version: '3.7'
+
+services: 
+
+    sample:
+        container_name: react-parcel-ts
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - '.:/app'
+            - '/app/node_modules'
+        ports: 
+            - '80:1234'
+
+        environment: 
+            - NODE_ENV=development
